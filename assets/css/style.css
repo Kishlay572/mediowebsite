@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+body {
+  padding-top: 66px; /* height of navbar */
+}
+
 /* ===== HERO SECTION (MARG STYLE) ===== */
-.hero{
-  background-color:green;
+.hero {
+  background-color: green;
   height: 100vh;
   background-image: url("../images/banner.jpg"); /* placeholder image */
   background-size: cover;
@@ -246,7 +250,7 @@
 /* Navbar pages */
 .page-container {
   max-width: 1100px;
-  margin: 120px auto 60px; /* space below navbar */
+  margin: 60px auto;
   padding: 0 20px;
   font-family: "Poppins", sans-serif;
 }
@@ -260,7 +264,52 @@
   font-size: 16px;
   color: #444;
 }
-<<<<<<< HEAD
+
+/* ===== DROPDOWN ===== */
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #ffffff;
+  min-width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 2000;
+}
+
+/* dropdown links */
+.dropdown-menu a {
+  display: block;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #1a237e;
+  text-decoration: none;
+}
+
+/* hover effect inside dropdown */
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+  color: #1976d2;
+}
+
+/* show dropdown */
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* REMOVE underline inside dropdown */
+.dropdown-menu a::after {
+  display: none !important;
+}
 
 /* This code area is For Ankit Sharma that is below*/
 /* ===== HERO SECTION ===== */
@@ -341,10 +390,6 @@
     font-size: 15px;
   }
 }
-
-
-
-
 
 /* ===== KEY FEATURES SECTION ===== */
 .key-features {
@@ -438,8 +483,6 @@
   }
 }
 
-
-
 /* ===== SERVICES SECTION ===== */
 .services-section {
   padding: 90px 20px;
@@ -524,61 +567,351 @@
   }
 }
 
-
-
 /* This code area is For Ankit Sharma that is above*/
-=======
-/* ===== NAVBAR DROPDOWN ===== */
-.nav-dropdown {
-  position: relative;
-  display: inline-block;
+
+/* =====================================
+   RETAIL PAGE – HERO / TOP SECTION
+   ===================================== */
+
+/* Wrapper section */
+.retail-hero {
+  background: linear-gradient(135deg, #eaf7ee, #f3fbf8);
+  padding: 100px 20px 50px;
 }
 
-.dropdown-toggle {
+/* Center container */
+.retail-hero-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Text block */
+.retail-hero-text {
+  max-width: 650px;
+}
+
+/* Small badge at top */
+.retail-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border: 1.5px dashed #2e7d32;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Main heading */
+.retail-hero-text h1 {
+  font-size: 42px;
+  line-height: 1.3;
+  color: #1b5e20;
+  margin-bottom: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+/* Highlight word */
+.retail-hero-text h1 span {
+  color: #2e7d32;
+}
+
+/* Description text */
+.retail-hero-text p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Transparent CTA button */
+.retail-hero-btn {
+  padding: 14px 30px;
+  background: transparent;
+  border: 2px solid #2e7d32;
+  color: #2e7d32;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Button hover */
+.retail-hero-btn:hover {
+  background-color: #2e7d32;
+  color: #ffffff;
+}
+
+/* =====================================
+   RETAIL SERVICES SECTION
+   ===================================== */
+
+.retail-services {
+  background-color: #ffffff;
+  padding: 30px 20px 90px;
+}
+
+.retail-services-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Section header */
+.retail-services-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.retail-services-header h2 {
+  font-size: 34px;
+  color: #1b5e20;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.retail-services-header p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Cards grid */
+.retail-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Individual card */
+.retail-service-card {
+  background: #f9fdfb;
+  border-radius: 14px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.retail-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon */
+.service-icon {
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+
+/* Card title */
+.retail-service-card h3 {
+  font-size: 20px;
+  color: #0b5f52;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* Card text */
+.retail-service-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Card button */
+.service-btn {
+  padding: 12px 26px;
+  background: transparent;
+  border: 2px solid #2e7d32;
+  color: #2e7d32;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.service-btn:hover {
+  background-color: #2e7d32;
+  color: #ffffff;
+}
+
+/* =====================================
+   MODAL POPUP (RETAIL SERVICE FORM)
+   ===================================== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 26px;
+  border-radius: 14px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-content h2 {
+  font-size: 22px;
+  color: #1b5e20;
+  margin-bottom: 6px;
+}
+
+.modal-content p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Form */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-form input,
+.modal-form textarea {
+  width: 24.5rem;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-form textarea {
+  resize: none;
+  height: 90px;
+}
+
+.modal-form button {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #2e7d32;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
 }
 
-/* Dropdown box */
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  min-width: 200px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 6px;
-  display: none;
-  z-index: 1000;
+.modal-form button:hover {
+  background-color: #1b5e20;
 }
 
-/* Dropdown links */
-.dropdown-menu a {
-  display: block;
-  padding: 12px 16px;
-  color: #1a237e;
-  text-decoration: none;
-  font-size: 14px;
+/* =====================================
+   FAQ SECTION – BireenaMediocare
+   ===================================== */
+
+.faq-section {
+  background-color: #f3fbf8;
+  padding: 20px 20px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 34px;
+  color: #1b5e20;
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #dbeee6;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 18px 22px;
+  font-size: 16px;
   font-weight: 500;
+  color: #0b5f52;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  position: relative;
 }
 
-.dropdown-menu a:hover {
-  background-color: #f5f5f5;
-  color: #1976d2;
+/* Arrow */
+.faq-question::after {
+  content: "›"; /* clean chevron */
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 22px;
+  font-weight: 700;
+  color: #0b5f52;
+  transition: transform 0.3s ease;
 }
 
-/* REMOVE HOVER LINE ONLY IN DROPDOWN */
-.dropdown-menu a::after {
-  display: none !important;
+/* Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
 }
 
-/* Show dropdown on hover */
-.nav-dropdown:hover .dropdown-menu {
-  display: block;
+.faq-answer p {
+  padding: 0 22px 20px;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Arrow spacing */
-.arrow {
-  font-size: 12px;
-  margin-left: 4px;
+/* Active state */
+.faq-item.active .faq-answer {
+  max-height: 300px;
 }
->>>>>>> ee11367c6b3606aed92a053f122df99ffb7adacf
+
+.faq-item.active .faq-question::after {
+  transform: translateY(-50%) rotate(-90deg);
+}

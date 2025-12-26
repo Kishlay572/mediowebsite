@@ -11,21 +11,223 @@
     <!-- HEADER -->
     <div id="header"></div>
 
-    <div class="page-container">
-      <h1>Retail Services</h1>
-      <p>
-        Our retail services are designed specifically for medical shops and
-        pharmacies to ensure smooth daily operations.
-      </p>
+    <!-- ===== RETAIL HERO SECTION ===== -->
+    <section class="retail-hero">
+      <div class="retail-hero-container">
+        <div class="retail-hero-text">
+          <span class="retail-badge"> Retail Medical Services </span>
 
-      <ul>
-        <li>Free demo for retail medical shops</li>
-        <li>Software installation and setup</li>
-        <li>Staff training and onboarding</li>
-        <li>Technical support and maintenance</li>
-        <li>Customization based on shop needs</li>
-      </ul>
+          <h1>
+            Transform Your Retail <br />
+            Medical Shop with <span>Smart Digital Services</span>
+          </h1>
+
+          <p>
+            Empower your pharmacy to offer modern healthcare services, improve
+            customer experience, and increase revenue — all from your existing
+            retail setup.
+          </p>
+
+          <button class="service-btn" onclick="openModal()">
+            Activate Retail Service
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RETAIL SERVICES SECTION ===== -->
+    <section class="retail-services">
+      <div class="retail-services-container">
+        <div class="retail-services-header">
+          <h2>Retail Pharmacy Services We Offer</h2>
+          <p>
+            Essential software services designed to simplify daily operations of
+            retail pharmacies and medical stores.
+          </p>
+        </div>
+
+        <div class="retail-services-grid">
+          <!-- Card 1 -->
+          <div class="retail-service-card">
+            <div class="service-icon">🧾</div>
+            <h3>Fast Retail Billing</h3>
+            <p>
+              Generate GST-compliant bills quickly using barcode scanning.
+              Supports thermal, A4, and dot matrix printers for smooth billing.
+            </p>
+            <button class="service-btn" onclick="openModal()">
+              Activate Service
+            </button>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="retail-service-card">
+            <div class="service-icon">📦</div>
+            <h3>Medicine & Inventory Management</h3>
+            <p>
+              Manage all medicines with real-time stock updates, rack-wise
+              storage, and batch-level tracking to avoid shortages.
+            </p>
+            <button class="service-btn" onclick="openModal()">
+              Activate Service
+            </button>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="retail-service-card">
+            <div class="service-icon">⏰</div>
+            <h3>Expiry & Batch Management</h3>
+            <p>
+              Track medicine expiry dates and batch details with automatic
+              alerts to prevent expired stock sales and losses.
+            </p>
+            <button class="service-btn" onclick="openModal()">
+              Activate Service
+            </button>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="retail-service-card">
+            <div class="service-icon">🤝</div>
+            <h3>Purchase & Supplier Management</h3>
+            <p>
+              Record supplier purchases, manage invoices, and update stock
+              automatically while tracking vendor payments.
+            </p>
+            <button class="service-btn" onclick="openModal()">
+              Activate Service
+            </button>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="retail-service-card">
+            <div class="service-icon">📊</div>
+            <h3>GST & Sales Reports</h3>
+            <p>
+              Access GST reports, daily sales summaries, and accounting insights
+              to stay compliant and improve business decisions.
+            </p>
+            <button class="service-btn" onclick="openModal()">
+              Activate Service
+            </button>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="retail-service-card">
+            <div class="service-icon">👥</div>
+            <h3>Customer & Prescription Management</h3>
+            <p>
+              Maintain customer purchase history and manage prescriptions
+              digitally to provide faster service and improved customer care.
+            </p>
+            <button class="service-btn" onclick="openModal()">
+              Activate Service
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== RETAIL SERVICE MODAL ===== -->
+    <div class="modal-overlay" id="serviceModal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">×</span>
+
+        <h2>Book a Free Retail Service Demo</h2>
+        <p>Fill in your details and our team will contact you shortly.</p>
+
+        <form class="modal-form">
+          <input type="text" placeholder="Your Name" required />
+          <input
+            type="tel"
+            placeholder="Mobile Number"
+            pattern="[0-9]{10}"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Pincode"
+            pattern="[0-9]{6}"
+            required
+          />
+
+          <button type="submit">Book Demo</button>
+        </form>
+      </div>
     </div>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="faq-section">
+      <div class="faq-container">
+        <h2 class="faq-title">FAQ</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">What is BireenaMediocare?</div>
+          <div class="faq-answer">
+            <p>
+              BireenaMediocare provides digital software solutions for retail
+              medical shops to manage billing, inventory, GST, and daily
+              pharmacy operations efficiently.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Is this software suitable for small retail pharmacies?
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes, the software is designed for both small and large medical
+              stores and can scale as your business grows.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Does the system support GST billing?</div>
+          <div class="faq-answer">
+            <p>
+              Yes, BireenaMediocare supports GST-compliant billing with HSN
+              codes, tax breakup, and detailed reports.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Can I track medicine expiry and batch details?
+          </div>
+          <div class="faq-answer">
+            <p>
+              The software provides batch-wise tracking and automatic expiry
+              alerts to help reduce losses from expired medicines.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is training and support provided?</div>
+          <div class="faq-answer">
+            <p>
+              Yes, training and continuous support are provided to ensure smooth
+              usage of the software.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Can I request a demo before activation?
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes, you can request a free demo, and our team will guide you
+              through all the features.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="../../assets/js/main.js"></script>
   </body>
