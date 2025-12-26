@@ -252,3 +252,325 @@
   font-size: 16px;
   color: #444;
 }
+<<<<<<< HEAD
+
+/* This code area is For Ankit Sharma that is below*/
+/* ===== HERO SECTION ===== */
+.pharmacy-hero {
+  padding: 80px 20px;
+  text-align: center;
+  color: #0f172a; /* dark slate text */
+}
+
+/* ===== MAIN HEADING ===== */
+.hero-title {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  font-family: "Poppins", "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* ===== SUB TEXT ===== */
+.hero-description {
+  max-width: 780px;
+  margin: 0 auto 40px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #475569;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* ===== FEATURES LIST ===== */
+.feature-list {
+  list-style: none;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* ===== FEATURE CARD ===== */
+.feature-item {
+  background: transparent; /* no background */
+  border: 1px solid #e2e8f0;
+  padding: 16px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* ✔ ICON */
+.feature-item::before {
+  content: "✔";
+  font-weight: 700;
+  color: #0ea5a4;
+  font-size: 15px;
+}
+
+/* ===== HOVER EFFECT ===== */
+.feature-item:hover {
+  border-color: #0ea5a4;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+/* ===== KEY FEATURES SECTION ===== */
+.key-features {
+  padding: 90px 20px;
+  background: #ffffff;
+}
+
+.key-features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #0f172a;
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  max-width: 720px;
+  margin: 0 auto 50px;
+  color: #475569;
+  line-height: 1.7;
+  font-family: "Inter", sans-serif;
+}
+
+/* FEATURES GRID */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* FEATURE BOX */
+/* ===== FEATURE BOX SECTION ===== */
+.feature-box-section {
+  padding: 70px 20px;
+  background: #ffffff;
+}
+
+/* CONTAINER */
+.feature-box-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* BOX STYLE */
+.feature-box {
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 30px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* HEADING */
+.feature-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+/* TEXT */
+.feature-box p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* HOVER EFFECT */
+.feature-box:hover {
+  border-color: #16a34a;
+  background: rgba(22, 163, 74, 0.05);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(22, 163, 74, 0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .feature-box-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ===== SERVICES SECTION ===== */
+.services-section {
+  padding: 90px 20px;
+  background: #ffffff;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* TITLE */
+.services-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #1e293b;
+}
+
+.services-title span {
+  color: #0ea5a4;
+}
+
+/* SUBTITLE */
+.services-subtitle {
+  max-width: 760px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+.service-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px 26px;
+  text-align: left;
+  transition: all 0.35s ease;
+  background: #ffffff;
+}
+
+/* HEADING */
+.service-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+/* TEXT */
+.service-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* HOVER EFFECT (Green Highlight) */
+.service-card:hover {
+  border-color: #16a34a;
+  background: rgba(22, 163, 74, 0.04);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(22, 163, 74, 0.14);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-title {
+    font-size: 28px;
+  }
+}
+
+
+
+/* This code area is For Ankit Sharma that is above*/
+=======
+/* ===== NAVBAR DROPDOWN ===== */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+/* Dropdown box */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  display: none;
+  z-index: 1000;
+}
+
+/* Dropdown links */
+.dropdown-menu a {
+  display: block;
+  padding: 12px 16px;
+  color: #1a237e;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+  color: #1976d2;
+}
+
+/* REMOVE HOVER LINE ONLY IN DROPDOWN */
+.dropdown-menu a::after {
+  display: none !important;
+}
+
+/* Show dropdown on hover */
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Arrow spacing */
+.arrow {
+  font-size: 12px;
+  margin-left: 4px;
+}
+>>>>>>> ee11367c6b3606aed92a053f122df99ffb7adacf
