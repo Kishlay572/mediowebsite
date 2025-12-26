@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ===== HERO SECTION (MARG STYLE) ===== */
+.hero {
+  height: 100vh;
+  background-image: url("../images/banner.jpg"); /* placeholder image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(255, 255, 255, 0.85);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* LEFT TEXT */
+.hero-text {
+  flex: 1;
+  margin-top: -45px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  color: #2e7d32;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.hero-points {
+  list-style: none;
+  padding: 0;
+}
+
+.hero-points li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* RIGHT FORM CARD */
+.hero-form-card {
+  flex: 1;
+  max-width: 300px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-form-card h3 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.hero-form-card input {
+  width: 17rem;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.demo-btn {
+  width: 14rem;
+  padding: 12px;
+  background-color: #2e7d32; /* green button */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* ===== DEMO CARD (RIGHT SIDE) ===== */
+.demo-card {
+  width: 300px;
+  background-color: #ffffff;
+  padding: 18px 22px 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+/* Heading */
+.demo-card h2 {
+  text-align: center;
+  font-size: 24px; /* slightly smaller */
+  font-weight: 700;
+  color: #0b5f52;
+  margin-bottom: 14px; /* less space below heading */
+  margin-top: 0; /* push heading UP */
+
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Form */
+.demo-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input wrapper */
+.input-group {
+  margin-bottom: 14px;
+}
+
+/* Inputs */
+.demo-form input {
+  width: 17rem;
+  padding: 14px 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1.5px solid #d0d7de;
+  outline: none;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.demo-form input::placeholder {
+  color: #666;
+}
+
+/* Focus effect */
+.demo-form input:focus {
+  border-color: #1976d2;
+}
+
+/* Button */
+.demo-submit-btn {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background-color: #0b7a5c; /* green button like screenshot */
+  color: #ffffff;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.demo-submit-btn:hover {
+  background-color: #096b51;
+}
+/* ===== NAVBAR (MARG STYLE) ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 1000;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.nav-logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0b5f52; /* Marg-like green */
+  letter-spacing: 0.5px;
+}
+
+/* NAV LINKS */
+.nav-links a {
+  margin-left: 28px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a237e; /* dark blue like Marg */
+  position: relative;
+}
+
+/* ACTIVE / UNDERLINE EFFECT */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #e53935; /* red underline like Marg */
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #e53935;
+}
+
+/* CTA BUTTON */
+.nav-demo-btn {
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-demo-btn:hover {
+  background-color: #125aa0;
+}
+
+/* Navbar pages */
+.page-container {
+  max-width: 1100px;
+  margin: 120px auto 60px; /* space below navbar */
+  padding: 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.page-container h1 {
+  color: #0b5f52;
+  margin-bottom: 10px;
+}
+
+.page-container p {
+  font-size: 16px;
+  color: #444;
+}
