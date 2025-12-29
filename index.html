@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Pharmacy Software</title>
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <title>BireenaMedico - Complete Pharmacy Software Solution</title>
+    <meta name="description" content="Complete pharmacy software solution for billing, inventory, and accounting. Increase efficiency and profits with our smart pharmacy management system." />
   </head>
 
   <body>
@@ -12,7 +14,7 @@
     <div id="header"></div>
 
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero" id="demo">
       <div class="hero-overlay">
         <!-- SAME MAIN DIV -->
         <div class="hero-container">
@@ -51,17 +53,17 @@
           <div class="demo-card">
             <h2>Book Free Demo</h2>
 
-            <form class="demo-form">
+            <form class="demo-form" id="demoForm">
               <div class="input-group">
-                <input type="text" placeholder="Name" required />
+                <input type="text" name="name" placeholder="Full Name" required />
               </div>
 
               <div class="input-group">
-                <input type="tel" placeholder="Mobile Number" required />
+                <input type="tel" name="phone" placeholder="Mobile Number" pattern="[0-9]{10}" required />
               </div>
 
               <div class="input-group">
-                <input type="text" placeholder="Pin Code" required />
+                <input type="text" name="pincode" placeholder="Pin Code" pattern="[0-9]{6}" required />
               </div>
 
               <button type="submit" class="demo-submit-btn">
@@ -184,6 +186,32 @@
       </div>
     </section>
 
+    <section class="who-we-are">
+  <div class="who-container">
+
+    <!-- Left Content -->
+    <div class="who-content">
+      <h2 class="who-title">
+  <span class="who-word">Who</span> <span class="we-word">We Are?</span>
+</h2>
+
+      <p>
+        BireenaMedico is a smart pharmacy software provider focused on billing,
+        inventory, and accounting solutions. We help pharmacies reduce losses,
+        manage stock efficiently, and grow their business through reliable,
+        easy-to-use, and technology-driven systems.
+      </p>
+    </div>
+
+    <!-- Right Image -->
+    <div class="who-image">
+      <img src="/assets/images/Bireenalogo.jpeg" alt="BireenaMedico">
+    </div>
+
+  </div>
+</section>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+
