@@ -18,3 +18,28 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("NAVBAR LOAD ERROR:", error);
     });
 });
+
+// ===== MODAL HANDLING ===== //
+function openModal() {
+  document.getElementById("serviceModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("serviceModal").style.display = "none";
+}
+
+// Close modal when clicking outside
+window.addEventListener("click", function (e) {
+  const modal = document.getElementById("serviceModal");
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+// ===== FAQ ===== //
+document.querySelectorAll(".faq-question").forEach((question) => {
+  question.addEventListener("click", () => {
+    const item = question.parentElement;
+    item.classList.toggle("active");
+  });
+});
