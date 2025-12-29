@@ -70,7 +70,7 @@ body {
 
 .hero-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto;            /* ❌ no top margin */
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 420px;
@@ -79,6 +79,7 @@ body {
   position: relative;
   z-index: 2;
 }
+
 
 .hero-text {
   flex: 1;
@@ -112,7 +113,9 @@ body {
   text-shadow: none;
   letter-spacing: -0.02em;
 }
-
+.hero-title{
+  margin-top: 85px;
+}
 .hero-subtitle {
   font-size: 18px;
   margin-bottom: 20px;
@@ -847,7 +850,7 @@ body {
   background: #ffffff;
 }
 
-.feature-box-container {
+.key-feature-box-container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -855,7 +858,7 @@ body {
   gap: 28px;
 }
 
-.feature-box {
+.key-feature-box {
   background: var(--bg-white);
   border: 2px solid var(--border-color);
   border-radius: 20px;
@@ -867,7 +870,7 @@ body {
   box-shadow: var(--shadow-sm);
 }
 
-.feature-box::before {
+.key-feature-box::before {
   content: "";
   position: absolute;
   top: 0;
@@ -880,11 +883,11 @@ body {
   transition: transform 0.4s ease;
 }
 
-.feature-box:hover::before {
+.key-feature-box:hover::before {
   transform: scaleX(1);
 }
 
-.feature-box h3 {
+.key-feature-box h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 14px;
@@ -894,7 +897,7 @@ body {
   padding-left: 40px;
 }
 
-.feature-box h3::before {
+.key-feature-box h3::before {
   content: "◆";
   position: absolute;
   left: 0;
@@ -902,14 +905,14 @@ body {
   font-size: 20px;
 }
 
-.feature-box p {
+.key-feature-box p {
   font-size: 15px;
   line-height: 1.7;
   color: var(--text-gray);
   font-family: "Inter", sans-serif;
 }
 
-.feature-box:hover {
+.key-feature-box:hover {
   border-color: var(--primary-green);
   background: var(--bg-green-light);
   transform: translateY(-8px);
@@ -918,12 +921,12 @@ body {
 
 /* ===== RESPONSIVE KEY FEATURES ===== */
 @media (max-width: 700px) {
-  .feature-box-container {
+  .key-feature-box-container {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .feature-box {
+  .key-feature-box {
     padding: 28px 24px;
   }
 }
