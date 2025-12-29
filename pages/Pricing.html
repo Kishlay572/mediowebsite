@@ -1,32 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pricing page</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
-  </head>
-  <body>
-    <div id="header"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | Bireena Medico</title>
 
-    <div class="page-container">
-      <h1>Our Pricing</h1>
-      <p>
-        This page will include demo, customization, installation, training, and
-        support services.
-      </p>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/pricing.css">
+</head>
+<body>
+
+  <!-- HEADER (DON'T CHANGE) -->
+  <div id="header"></div>
+
+  <!-- PRICING HERO -->
+  <section class="pricing-hero">
+    <h1>Simple & Transparent Pricing</h1>
+    <p>
+      Choose the perfect plan for your medical store.  
+      No hidden charges. Full support included.
+    </p>
+  </section>
+
+  <!-- PRICING PLANS -->
+  <section class="pricing-container">
+
+    <!-- BASIC PLAN -->
+    <div class="pricing-card">
+      <h3>Basic</h3>
+      <p class="price">₹999<span>/month</span></p>
+      <ul>
+        <li>✔ Billing & Invoicing</li>
+        <li>✔ Inventory Management</li>
+        <li>✔ Customer Records</li>
+        <li>✔ Basic Reports</li>
+        <li>✖ GST Filing Support</li>
+        <li>✖ Cloud Backup</li>
+      </ul>
+      <button class="pricing-btn">Get Started</button>
     </div>
 
-    <div id="footer"></div>
+    <!-- PROFESSIONAL PLAN -->
+    <div class="pricing-card popular">
+      <span class="badge">Most Popular</span>
+      <h3>Professional</h3>
+      <p class="price">₹1999<span>/month</span></p>
+      <ul>
+        <li>✔ All Basic Features</li>
+        <li>✔ GST Billing & Reports</li>
+        <li>✔ Supplier Management</li>
+        <li>✔ Expiry Alerts</li>
+        <li>✔ Sales & Profit Analysis</li>
+        <li>✖ Advanced Cloud Features</li>
+      </ul>
+      <button class="pricing-btn primary">Choose Plan</button>
+    </div>
 
-<script>
-  fetch("/components/footer.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    });
-</script>
+    <!-- PREMIUM PLAN -->
+    <div class="pricing-card premium">
+      <h3>Premium</h3>
+      <p class="price">₹2999<span>/month</span></p>
+      <ul>
+        <li>✔ All Professional Features</li>
+        <li>✔ Cloud Backup & Sync</li>
+        <li>✔ Multi-Store Support</li>
+        <li>✔ Role-Based Access</li>
+        <li>✔ Priority Support</li>
+        <li>✔ Free Installation & Training</li>
+      </ul>
+      <button class="pricing-btn">Go Premium</button>
+    </div>
 
-    <script src="../assets/js/main.js"></script>
-  </body>
+  </section>
+
+  
+  <!-- FAQ SECTION -->
+<section class="faq-section">
+  <div class="faq-container">
+
+    <!-- HEADER -->
+    <div class="faq-header">
+      <h2>Frequently Asked <span>Questions</span></h2>
+      <p>Have questions about our pricing? We’ve got you covered.</p>
+    </div>
+
+    <!-- FAQ GRID -->
+    <div class="faq-grid">
+
+      <div class="faq-card">
+        <h3>Can I switch plans later?</h3>
+        <p>
+          Yes, you can upgrade or downgrade your plan at any time.
+          Charges will be adjusted accordingly.
+        </p>
+      </div>
+
+      <div class="faq-card">
+        <h3>Is there a setup fee?</h3>
+        <p>
+          No, there are no hidden setup fees. The price you see is all you pay,
+          plus applicable taxes.
+        </p>
+      </div>
+
+      <div class="faq-card">
+        <h3>Can I pay monthly instead of yearly?</h3>
+        <p>
+          We primarily offer yearly billing to provide the best value.
+          Contact us for custom billing options.
+        </p>
+      </div>
+
+      <div class="faq-card">
+        <h3>What kind of support do you offer?</h3>
+        <p>
+          Each plan includes support options. Higher plans include
+          priority support and dedicated assistance.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+ <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <!-- JS -->
+
+  <script>
+    fetch("/components/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+
+<script src="../assets/js/main.js"></script>
+  
+
+
+  <script src="../assets/js/main.js"></script>
+</body>
 </html>
