@@ -173,6 +173,7 @@
 }
 
 .nav-container {
+  flex-wrap: nowrap;
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 22px;
@@ -181,8 +182,17 @@
   justify-content: space-between;
 }
 
+.nav-links{
+display: flex;
+align-items: center;
+gap:24px;
+white-space: nowrap;
+}
+
 /* LOGO */
 .nav-logo {
+  display: flex;
+  align-content: center;
   font-size: 28px;
   font-weight: 700;
   color: #0b5f52; /* Marg-like green */
@@ -252,7 +262,6 @@
   font-size: 16px;
   color: #444;
 }
-<<<<<<< HEAD
 
 /* This code area is For Ankit Sharma that is below*/
 /* ===== HERO SECTION ===== */
@@ -519,58 +528,3 @@
 
 
 /* This code area is For Ankit Sharma that is above*/
-=======
-/* ===== NAVBAR DROPDOWN ===== */
-.nav-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-toggle {
-  cursor: pointer;
-}
-
-/* Dropdown box */
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  min-width: 200px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 6px;
-  display: none;
-  z-index: 1000;
-}
-
-/* Dropdown links */
-.dropdown-menu a {
-  display: block;
-  padding: 12px 16px;
-  color: #1a237e;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.dropdown-menu a:hover {
-  background-color: #f5f5f5;
-  color: #1976d2;
-}
-
-/* REMOVE HOVER LINE ONLY IN DROPDOWN */
-.dropdown-menu a::after {
-  display: none !important;
-}
-
-/* Show dropdown on hover */
-.nav-dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Arrow spacing */
-.arrow {
-  font-size: 12px;
-  margin-left: 4px;
-}
->>>>>>> ee11367c6b3606aed92a053f122df99ffb7adacf
