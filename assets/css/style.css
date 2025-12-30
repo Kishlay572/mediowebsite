@@ -2624,21 +2624,27 @@ textarea {
 }
 
 /* IMAGE */
+/* IMAGE WRAPPER */
 .owner-image {
   display: flex;
   justify-content: center;
 }
 
+/* IMAGE FIXED CIRCLE */
 .owner-image img {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;              /* 👈 CIRCLE */
-  object-fit: cover;               /* image distort nahi hogi */
-  border: 6px solid #ffffff;       /* clean white ring */
+  width: 300px;
+  aspect-ratio: 1 / 1;   /* 🔥 KEY LINE — circle guarantee */
+  height: auto;
+
+  border-radius: 50%;
+  object-fit: cover;    /* image crop hogi, stretch nahi */
+  
+  border: 6px solid #ffffff;
   box-shadow: 
     0 20px 40px rgba(15, 23, 42, 0.18),
-    0 0 0 6px rgba(14, 165, 164, 0.15); /* soft green glow */
+    0 0 0 6px rgba(14, 165, 164, 0.15);
 }
+
 
 
 /* RIGHT CONTENT */
@@ -2839,6 +2845,7 @@ textarea {
 /* ============================
    FEATURE QUOTE
    ============================ */
+
 .feature-quote {
   background: linear-gradient(135deg, #f4fffb, #e6f5f2);
   padding: 28px 24px;
