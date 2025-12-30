@@ -2981,14 +2981,11 @@ textarea {
 /* ============================
    ADVANCED FEATURES SECTION
    ============================ */
-.features-advanced {
-  margin-bottom: 80px;
-}
 
-.features-advanced h2 {
+.features-advanced {
   text-align: center;
   font-size: 34px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   color: var(--primary-dark);
   font-family: "Poppins", sans-serif;
 }
@@ -2997,38 +2994,9 @@ textarea {
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
 }
 
 /* FEATURE BOX */
-.feature-box {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 28px 24px;
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.35s ease;
-}
-
-.feature-box h4 {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: var(--text-main);
-}
-
-.feature-box p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--text-muted);
-}
-
-/* HOVER */
-.feature-box:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary);
-}
 
 /* ============================
    FEATURES HERO
@@ -3060,7 +3028,7 @@ textarea {
    ============================ */
 .features-container {
   max-width: 1200px;
-  margin: 80px auto;
+  margin: 50px auto;
   padding: 0 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
