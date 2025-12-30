@@ -13,11 +13,43 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .then((data) => {
       headerDiv.innerHTML = data;
+      // Initialize mobile menu after header is loaded
+      initMobileMenu();
     })
     .catch((error) => {
       console.error("NAVBAR LOAD ERROR:", error);
     });
 });
+
+// ===== MOBILE MENU TOGGLE ===== //
+function initMobileMenu() {
+  const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  if (!mobileMenuToggle || !navLinks) return;
+
+  // Toggle menu on hamburger click
+  mobileMenuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+    mobileMenuToggle.classList.toggle("active");
+  });
+
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", function () {
+      navLinks.classList.remove("active");
+      mobileMenuToggle.classList.remove("active");
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".navbar")) {
+      navLinks.classList.remove("active");
+      mobileMenuToggle.classList.remove("active");
+    }
+  });
+}
 
 // ===== MODAL HANDLING ===== //
 function openModal() {

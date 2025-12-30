@@ -3325,3 +3325,341 @@ header + section {
     font-size: 16px;
   }
 }
+
+/* ============================
+   RESPONSIVE OVERRIDES (Mobile-first fixes)
+   Appended to safely override fixed widths and prevent horizontal scroll
+   ============================ */
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Make media scale properly */
+img, picture, video, svg, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure long words/links wrap */
+* {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Modal fixed-widths cause horizontal scroll on small screens */
+.modal-form input,
+.modal-form textarea,
+.modal-content,
+.modal-form select {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* Demo card and auth card full width on small screens */
+.demo-card,
+.auth-card,
+.pricing-card,
+.feature-card,
+.about-card {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Owner image shouldn't force overflow */
+.owner-image img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Reduce heavy paddings on smaller screens for readability */
+.hero-overlay,
+.hero,
+.key-features,
+.services-section,
+.feature-box-section,
+.who-we-are,
+.about-section-modern,
+.pricing-hero,
+.owner-section {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.page-container,
+.key-features-container,
+.services-container,
+.retail-services-container,
+.about-content-wrapper,
+.owner-container {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+/* Navbar tweaks */
+.nav-container {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+/* Prevent sticky demo card from overlapping on small screens */
+@media (max-width: 968px) {
+  .demo-card {
+    position: relative !important;
+    top: 0 !important;
+    margin: 0 auto;
+  }
+}
+
+/* Breakpoints: laptop/tablet/phone */
+@media (max-width: 1200px) {
+  .footer-container { grid-template-columns: repeat(3, 1fr) !important; }
+  .hero-container { max-width: 100%; gap: 40px; }
+  .page-container { max-width: 100%; margin: 40px auto; }
+}
+
+@media (max-width: 992px) {
+  .hero-container { grid-template-columns: 1fr !important; }
+  .who-container, .owner-container { grid-template-columns: 1fr !important; }
+  .retail-hero-container { flex-direction: column; gap: 24px; }
+  .nav-links a { font-size: 15px; }
+}
+
+@media (max-width: 768px) {
+  body { padding-top: 68px !important; }
+  .hero-overlay { padding: 24px 12px !important; }
+  .hero-title { font-size: 28px !important; }
+  .hero-description, .hero-subtitle { font-size: 15px !important; }
+  .feature-list { grid-template-columns: 1fr !important; }
+  .services-grid, .features-grid, .features-container, .features-advanced .features-grid { grid-template-columns: 1fr !important; }
+  .retail-services-grid { grid-template-columns: 1fr !important; }
+  .nav-login-btn { padding: 8px 12px !important; font-size: 13px !important; }
+  .nav-container { padding: 12px 14px !important; }
+  .footer { padding: 60px 16px 30px !important; }
+}
+
+@media (max-width: 576px) {
+  body { padding-top: 64px !important; }
+  .nav-logo { font-size: 20px !important; }
+  .nav-links a { padding: 12px 14px !important; }
+  .hero-text h1, .hero-title { font-size: 24px !important; }
+  .demo-form input, .auth-form .input-group input { padding: 12px 14px !important; }
+  .auth-card { padding: 28px 20px !important; }
+  .modal-content { margin: 12px; }
+  .owner-image img { max-width: 260px; }
+  .pricing-container { padding: 30px 4% !important; }
+  .page-container { margin: 24px auto !important; }
+}
+
+/* Small tweaks to avoid invisible overflows caused by transforms */
+.key-feature-box, .service-card, .feature-box, .pricing-card, .about-card {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Ensure links inside nav wrap and don't push layout */
+.nav-links { max-width: 100%; }
+.nav-links a { white-space: normal; }
+
+/* Buttons should shrink gracefully */
+button, .btn-primary, .demo-submit-btn, .auth-submit-btn, .pricing-btn { min-width: 0; }
+
+/* Accessibility: make focus outlines visible on small screens */
+a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(16,185,129,0.12); outline-offset: 2px; }
+
+/* ===== FOOTER: additional responsive improvements ===== */
+/* Ensure footer columns collapse cleanly and content wraps */
+.footer, .bm-footer { box-sizing: border-box; }
+.footer-column { min-width: 0; }
+.footer-column ul { margin: 0; padding: 0; }
+.footer-column ul li a { display: block; word-break: break-word; overflow-wrap: break-word; }
+
+/* Slightly smaller icons on small screens */
+.icon { width: 34px; height: 34px; }
+.footer-column.social .icon { width: 36px; height: 36px; }
+
+/* Footer responsive breakpoints: stack columns and adjust spacing */
+@media (max-width: 1100px) {
+  .footer-container { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+}
+
+@media (max-width: 900px) {
+  .footer-container { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .footer { padding: 60px 18px 28px; }
+  .footer-column h4 { font-size: 16px; }
+}
+
+@media (max-width: 600px) {
+  .footer-container { grid-template-columns: 1fr; gap: 20px; }
+  .footer { padding: 40px 14px 24px; }
+  .footer-column { text-align: left; }
+  .footer-column.social { text-align: left; }
+  .footer-column ul li { margin-bottom: 10px; }
+  .icon { width: 30px; height: 30px; }
+  .footer-column h4 { font-size: 15px; margin-bottom: 12px; }
+  .footer-column ul li a { font-size: 14px; }
+  .bm-footer { padding: 40px 16px 20px; }
+  .bm-footer-container { grid-template-columns: 1fr !important; }
+  .bm-footer-box { padding: 20px; }
+  .bm-footer-bottom { margin-top: 32px; }
+}
+
+/* Ensure footer bottom alignment is centered on small screens */
+@media (max-width: 480px) {
+  .footer-column, .footer-column ul { text-align: center; }
+  .footer-column.social { text-align: center; }
+  .footer-column.social ul li a { justify-content: center; }
+  .footer-column .icon { margin: 0 auto 6px; }
+}
+
+/* ==========================
+   RESPONSIVE NAVBAR (mobile-first hamburger)
+   Desktop (≥769px): hamburger hidden, nav inline
+   Mobile (≤768px): hamburger left, sliding menu overlay
+   ==========================
+*/
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-dark);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Desktop (≥769px): standard navbar */
+@media (min-width: 769px) {
+  .mobile-menu-toggle { display: none !important; }
+  .nav-links { position: relative !important; top: 0 !important; left: 0 !important; width: auto !important; height: auto !important; flex-direction: row !important; padding: 0 20px !important; gap: 8px !important; box-shadow: none !important; background: transparent !important; overflow: visible !important; margin-left: 24px; }
+  .nav-links a { width: auto !important; padding: 8px 16px !important; margin: 0 !important; }
+  .nav-cta { display: flex !important; margin-left: auto !important; }
+  .dropdown-menu { position: absolute !important; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15) !important; }
+}
+
+/* Mobile/Tablet (≤768px): hamburger + sliding menu */
+@media (max-width: 768px) {
+  .nav-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* show hamburger on left of container */
+  .mobile-menu-toggle {
+    display: flex !important;
+    order: -1;
+    margin-right: 8px;
+  }
+
+  /* center logo */
+  .nav-logo {
+    flex: 1;
+    text-align: center;
+    font-size: 22px !important;
+    margin: 0;
+  }
+
+  /* hidden nav menu slides in from left */
+  .nav-links {
+    position: fixed !important;
+    top: 70px !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: calc(100vh - 70px) !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 20px 16px !important;
+    gap: 4px !important;
+    overflow-y: auto !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+    transition: left 0.3s ease !important;
+    z-index: 999 !important;
+  }
+
+  .nav-links.active {
+    left: 0 !important;
+  }
+
+  /* full-width, tap-friendly menu items */
+  .nav-links a {
+    width: 100% !important;
+    padding: 14px 14px !important;
+    margin: 4px 0 !important;
+    border-radius: 10px !important;
+    font-size: 15px !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+
+  .nav-dropdown {
+    width: 100% !important;
+  }
+
+  .dropdown-menu {
+    position: static !important;
+    display: none !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    box-shadow: none !important;
+    border: 1px solid var(--border-color) !important;
+  }
+
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown.active .dropdown-menu {
+    display: block !important;
+  }
+
+  /* login button stays visible in navbar (not in menu) */
+  .nav-cta {
+    display: flex !important;
+    margin-left: auto !important;
+    order: 1;
+  }
+
+  .nav-login-btn {
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* Small phones: adjust navbar height */
+@media (max-width: 480px) {
+  body { padding-top: 64px !important; }
+  .navbar { height: 64px; }
+  .nav-links { top: 64px !important; height: calc(100vh - 64px) !important; }
+  .nav-logo { font-size: 18px !important; }
+  .mobile-menu-toggle span { width: 24px; height: 2.5px; }
+}
+
+
