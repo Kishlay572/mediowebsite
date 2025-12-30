@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const headerDiv = document.getElementById("header");
-
   if (!headerDiv) return;
 
-  // Absolute path from project root
   fetch("/components/header.html")
     .then((response) => {
       if (!response.ok) {
@@ -13,65 +11,88 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .then((data) => {
       headerDiv.innerHTML = data;
-      // Initialize mobile menu after header is loaded
-      initMobileMenu();
+      initNavbar(); // ✅ init everything after load
     })
     .catch((error) => {
       console.error("NAVBAR LOAD ERROR:", error);
     });
 });
 
-// ===== MOBILE MENU TOGGLE ===== //
-function initMobileMenu() {
+/* ===============================
+   NAVBAR + MOBILE + DROPDOWN
+================================ */
+function initNavbar() {
   const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
   const navLinks = document.getElementById("nav-links");
+  const dropdownToggle = document.querySelector(".dropdown-toggle");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
 
-  if (!mobileMenuToggle || !navLinks) return;
+  if (!navLinks) return;
 
-  // Toggle menu on hamburger click
-  mobileMenuToggle.addEventListener("click", function () {
-    navLinks.classList.toggle("active");
-    mobileMenuToggle.classList.toggle("active");
-  });
+  /* ===== MOBILE MENU ===== */
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      navLinks.classList.toggle("active");
+      mobileMenuToggle.classList.toggle("active");
+    });
+  }
 
-  // Close menu when a link is clicked
+  /* ===== SERVICES DROPDOWN ===== */
+  if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener("click", function (e) {
+      e.preventDefault(); // 🚫 stop auto redirect
+      e.stopPropagation();
+      dropdownMenu.classList.toggle("active");
+    });
+  }
+
+  /* ===== CLOSE MENU ON LINK CLICK ===== */
   navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", function () {
+    link.addEventListener("click", () => {
       navLinks.classList.remove("active");
-      mobileMenuToggle.classList.remove("active");
+      if (dropdownMenu) dropdownMenu.classList.remove("active");
+      if (mobileMenuToggle) mobileMenuToggle.classList.remove("active");
     });
   });
 
-  // Close menu when clicking outside
+  /* ===== CLICK OUTSIDE TO CLOSE ===== */
   document.addEventListener("click", function (e) {
     if (!e.target.closest(".navbar")) {
       navLinks.classList.remove("active");
-      mobileMenuToggle.classList.remove("active");
+      if (dropdownMenu) dropdownMenu.classList.remove("active");
+      if (mobileMenuToggle) mobileMenuToggle.classList.remove("active");
     }
   });
 }
 
-// ===== MODAL HANDLING ===== //
+/* ===============================
+   MODAL HANDLING
+================================ */
 function openModal() {
-  document.getElementById("serviceModal").style.display = "flex";
+  const modal = document.getElementById("serviceModal");
+  if (modal) modal.style.display = "flex";
 }
 
 function closeModal() {
-  document.getElementById("serviceModal").style.display = "none";
+  const modal = document.getElementById("serviceModal");
+  if (modal) modal.style.display = "none";
 }
 
-// Close modal when clicking outside
 window.addEventListener("click", function (e) {
   const modal = document.getElementById("serviceModal");
-  if (e.target === modal) {
+  if (modal && e.target === modal) {
     closeModal();
   }
 });
 
-// ===== FAQ ===== //
-document.querySelectorAll(".faq-question").forEach((question) => {
-  question.addEventListener("click", () => {
-    const item = question.parentElement;
-    item.classList.toggle("active");
+/* ===============================
+   FAQ ACCORDION
+================================ */
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".faq-question").forEach((question) => {
+    question.addEventListener("click", () => {
+      question.parentElement.classList.toggle("active");
+    });
   });
 });

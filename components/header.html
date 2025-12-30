@@ -1,36 +1,61 @@
-<header class="navbar">
-  <div class="nav-container">
-    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <a href="/index.html" class="nav-logo">BireenaMedico</a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/login.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <!-- MOBILE MENU TOGGLE -->
+        <button
+          class="mobile-menu-toggle"
+          id="mobile-menu-toggle"
+          aria-label="Toggle menu"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-    <nav class="nav-links" id="nav-links">
-      <a href="/index.html">Home</a>
-      <a href="/pages/about.html">About</a>
-      <a href="/pages/features.html">Features</a>
+        <!-- LOGO -->
+        <a href="/index.html" class="nav-logo">BireenaMedico</a>
 
-      <div class="nav-dropdown">
-        <a href="#" class="dropdown-toggle">
-          Services <span class="arrow">▾</span>
-        </a>
+        <!-- NAV LINKS -->
+        <nav class="nav-links" id="nav-links">
+          <a href="/index.html">Home</a>
+          <a href="/pages/about.html">About</a>
+          <a href="/pages/features.html">Features</a>
 
-        <div class="dropdown-menu">
-          <a href="/pages/services/retail.html">Retail Services</a>
-          <a href="/pages/services/wholesale.html">Wholesale Services</a>
+          <!-- SERVICES DROPDOWN -->
+          <div class="nav-dropdown">
+            <a href="#" class="dropdown-toggle">
+              Services <span class="arrow">▾</span>
+            </a>
+
+            <div class="dropdown-menu">
+              <a href="/pages/services/retail.html">Retail Services</a>
+              <a href="/pages/services/wholesale.html">Wholesale Services</a>
+            </div>
+          </div>
+
+          <a href="/pages/pricing.html">Pricing</a>
+          <a href="/pages/contact.html">Contact</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="nav-cta">
+          <a href="/pages/Authentication/login.html" class="nav-login-btn">
+            Login
+          </a>
         </div>
       </div>
-
-      <a href="/pages/Pricing.html">Pricing</a>
-      <a href="/pages/contact.html">Contact</a>
-    </nav>
-
-    </nav>
-
-    <div class="nav-cta">
-      <a href="/pages/Authentication/login.html" class="nav-login-btn">Login</a>
-    </div>
-  </div>
-</header>
+    </header>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/login.js"></script>
+  </body>
+</html>
