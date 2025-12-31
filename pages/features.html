@@ -1,105 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Features | Bireena Medico</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Features</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
-  <!-- Main Styles -->
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/features.css" />
-</head>
+    <!-- Main Styles -->
+  </head>
 
-<body>
+  <body>
+    <style>
+      /*Features css*/
 
-  <!-- HEADER (Loaded via JS) -->
-  <div id="header"></div>
+      /* ============================
+   FEATURES PAGE STYLES
+   ============================ */
+      .page-offset {
+        margin-top: 83px;
+      }
+      :root {
+        --primary: #0b7a5c;
+        --primary-dark: #0b5f52;
+        --accent: #1976d2;
+        --bg-soft: #eaf7f2;
+        --text-main: #0f172a;
+        --text-muted: #475569;
+        --border-light: #dbeee8;
+        --shadow-sm: 0 6px 18px rgba(11, 122, 92, 0.08);
+        --shadow-lg: 0 14px 36px rgba(11, 122, 92, 0.18);
+      }
 
-  <!-- FEATURES HERO -->
-  <section class="features-hero">
-    <h1>Powerful Features for Modern Medical Stores</h1>
-    <p>
-      Bireena Medico is an all-in-one pharmacy & medical shop management software
-      designed to simplify billing, inventory, GST, and business growth.
-    </p>
-  </section>
+      /* PAGE CONTAINER */
+      .page-container {
+        max-width: 1200px;
+        margin: 110px auto 60px;
+        padding: 0 20px;
+      }
 
-  <!-- PAGE CONTENT -->
-  <div class="page-container">
+      /* ============================
+   FEATURE QUOTE
+   ============================ */
 
-    <!-- FEATURE QUOTE -->
-    <section class="feature-quote">
-      <p>
-        “Smart medical stores don’t just sell medicines,
-        they manage health with accuracy, speed, and trust.”
-      </p>
-    </section>
+      .feature-quote {
+        background: linear-gradient(135deg, #f4fffb, #e6f5f2);
+        padding: 28px 24px;
+        border-left: 6px solid var(--primary);
+        border-radius: 14px;
+        margin-bottom: 60px;
+        box-shadow: var(--shadow-sm);
+      }
 
-    <!-- ADVANCED FEATURES -->
-    <section class="features-advanced">
-      <h2>Powerful Capabilities That Make You Stand Out</h2>
+      .feature-quote p {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--primary-dark);
+        text-align: center;
+        line-height: 1.6;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
 
-      
+      /* ============================
+   ADVANCED FEATURES SECTION
+   ============================ */
 
-    <!-- MAIN FEATURE LIST -->
-    <section class="features-container">
+      .features-advanced {
+        text-align: center;
+        font-size: 34px;
+        margin-bottom: 0px;
+        color: var(--primary-dark);
+        font-family: "Poppins", sans-serif;
+      }
 
-      <div class="feature-card">
-        <h3>🧾 Smart Billing System</h3>
-        <p>GST-ready billing with discounts, barcode & invoice automation.</p>
+      /* GRID */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      /* FEATURE BOX */
+
+      /* ============================
+   FEATURES HERO
+   ============================ */
+      .features-hero {
+        background: linear-gradient(135deg, #eaf7f2, #f4fffb);
+        padding: 140px 20px 30px;
+        text-align: center;
+      }
+
+      .features-hero h1 {
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--primary-dark);
+        margin-bottom: 12px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .features-hero p {
+        max-width: 820px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 1.7;
+        color: var(--text-muted);
+      }
+
+      /* ============================
+   FEATURE CARDS (MAIN LIST)
+   ============================ */
+      .features-container {
+        max-width: 1200px;
+        margin: 30px auto 100px;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      .feature-card {
+        background: #ffffff;
+        padding: 30px 26px;
+        border-radius: 18px;
+        border: 1px solid var(--border-light);
+        box-shadow: var(--shadow-sm);
+        transition: all 0.35s ease;
+      }
+
+      .feature-card h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        color: var(--text-main);
+        font-family: "Poppins", sans-serif;
+      }
+
+      .feature-card p {
+        font-size: 15.5px;
+        line-height: 1.7;
+        color: var(--text-muted);
+      }
+
+      /* HOVER */
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--primary);
+      }
+
+      /* FIX UNWANTED SPACE */
+      .page-container {
+        padding-top: 0 !important;
+      }
+
+      .page-container section {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      /* ============================
+   RESPONSIVE
+   ============================ */
+      @media (max-width: 1000px) {
+        .features-grid,
+        .features-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .features-hero h1 {
+          font-size: 34px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .features-grid,
+        .features-container {
+          grid-template-columns: 1fr;
+        }
+
+        .feature-quote p {
+          font-size: 17px;
+        }
+
+        .features-hero h1 {
+          font-size: 26px;
+        }
+      }
+    </style>
+    <!-- HEADER (Loaded via JS) -->
+    <div id="header"></div>
+
+    <!-- FEATURES HERO -->
+    <main class="page-offset">
+      <section class="features-hero">
+        <h1>Powerful Features for Modern Medical Stores</h1>
+        <p>
+          Bireena Medico is an all-in-one pharmacy & medical shop management
+          software designed to simplify billing, inventory, GST, and business
+          growth.
+        </p>
+      </section>
+
+      <!-- PAGE CONTENT -->
+      <div class="page-container">
+        <!-- FEATURE QUOTE -->
+        <section class="feature-quote">
+          <p>
+            “Smart medical stores don’t just sell medicines, they manage health
+            with accuracy, speed, and trust.”
+          </p>
+        </section>
+
+        <!-- ADVANCED FEATURES -->
+        <div class="features-advanced">
+          <h2>Powerful Capabilities That Make You Stand Out</h2>
+        </div>
+        <!-- MAIN FEATURE LIST -->
+        <section class="features-container">
+          <div class="feature-card">
+            <h3>🧾 Smart Billing System</h3>
+            <p>
+              GST-ready billing with discounts, barcode & invoice automation.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>📦 Inventory Management</h3>
+            <p>Real-time stock tracking with expiry & batch control.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>📊 Sales & Profit Reports</h3>
+            <p>Daily, monthly & yearly business insights.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>👥 Customer Management</h3>
+            <p>Customer records, credit tracking & loyalty history.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>🏪 Supplier Management</h3>
+            <p>Purchase invoices, supplier payments & order tracking.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>🔐 Secure Login System</h3>
+            <p>Role-based access for admin & staff.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>☁️ Cloud Ready</h3>
+            <p>Access data anytime with secure backups.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>🧾 Prescription Record Management</h3>
+            <p>
+              Digital prescription storage for repeat & accurate dispensing.
+            </p>
+          </div>
+        </section>
       </div>
+    </main>
 
-      <div class="feature-card">
-        <h3>📦 Inventory Management</h3>
-        <p>Real-time stock tracking with expiry & batch control.</p>
-      </div>
+    <!-- FOOTER -->
+    <div id="footer"></div>
 
-      <div class="feature-card">
-        <h3>📊 Sales & Profit Reports</h3>
-        <p>Daily, monthly & yearly business insights.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>👥 Customer Management</h3>
-        <p>Customer records, credit tracking & loyalty history.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>🏪 Supplier Management</h3>
-        <p>Purchase invoices, supplier payments & order tracking.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>🔐 Secure Login System</h3>
-        <p>Role-based access for admin & staff.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>☁️ Cloud Ready</h3>
-        <p>Access data anytime with secure backups.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>🧾 Prescription Record Management</h3>
-        <p>Digital prescription storage for repeat & accurate dispensing.</p>
-      </div>
-
-    </section>
-
-  </div>
-
-  <!-- FOOTER -->
-  <div id="footer"></div>
-
-  <!-- JS -->
-  <script src="../assets/js/main.js"></script>
-  <script>
-    fetch("/components/footer.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("footer").innerHTML = data;
-      });
-  </script>
-
-</body>
+    <!-- JS -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
 </html>

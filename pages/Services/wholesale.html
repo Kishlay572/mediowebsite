@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wholesale Services | BireenaMediocare</title>
-    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/pages/Services/services.css" />
   </head>
   <body>
     <!-- HEADER -->
@@ -334,13 +335,13 @@
 
     <div id="footer"></div>
 
-<script>
-  fetch("/components/footer.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    });
-</script>
+    <script>
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
 
     <script src="../../assets/js/main.js"></script>
   </body>
