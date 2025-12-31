@@ -1,168 +1,160 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - BIREENASALESY</title>
-    
-    <link rel="stylesheet" href="../assets/css/contact.css" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <!-- Google Fonts (open-source) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="header"></div>
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
 
-    <main class="contact-page" id="main" tabindex="0">
-      <!-- Hero -->
-      <header class="hero-compact" role="banner">
-        <div class="hero-inner">
-          <div class="hero-text">
-            <h1>Contact Us</h1>
-            <p class="hero-sub">Friendly support for demos, technical help, or general questions — we're here to help.</p>
-          </div>
-          <div class="hero-note" aria-hidden="true">
-            <span class="badge">We reply within 24 hours</span>
-          </div>
-        </div>
-      </header>
+ <!-- Main CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
 
-      <!-- Grid: contact cards + map/form -->
-      <section class="grid-section" aria-label="Contact information and form">
-        <div class="cards-col">
-          <div class="cards">
-            <!-- Phone Card -->
-            <article class="info-card" aria-labelledby="phoneTitle">
-              <div class="icon" aria-hidden="true">
-                <!-- phone icon (open-source) -->
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22 16.92V20a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h3.09a1 1 0 0 1 1 .75c.12.94.37 1.85.74 2.7a1 1 0 0 1-.24 1.02L8.91 9.91a16 16 0 0 0 6.17 6.17l1.44-1.44a1 1 0 0 1 1.02-.24c.85.37 1.76.62 2.7.74a1 1 0 0 1 .75 1V22z" stroke="#0b7a5c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="card-body">
-                <h3 id="phoneTitle">Phone / WhatsApp</h3>
-                <p class="muted">Talk to our support team</p>
-                <a class="card-link" href="tel:+9779847012345">+977-9847012345</a>
-              </div>
-            </article>
+  <!-- HEADER (DON'T CHANGE) -->
+  <div id="header"></div>
 
-            <!-- Email Card -->
-            <article class="info-card" aria-labelledby="emailTitle">
-              <div class="icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 8.5v7A2.5 2.5 0 0 0 5.5 18h13A2.5 2.5 0 0 0 21 15.5v-7" stroke="#0b7a5c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 8.5L12 13l9-4.5" stroke="#0b7a5c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="card-body">
-                <h3 id="emailTitle">Email</h3>
-                <p class="muted">Send us an email</p>
-                <a class="card-link" href="mailto:support@bireenaathiti.com">support@bireenasalesy.com</a>
-                <a class="card-link" href="mailto:bireenainfo@gmail.com">bireenainfo@gmail.com</a>
-              </div>
-            </article>
 
-            <!-- Address Card -->
-            <article class="info-card" aria-labelledby="addressTitle">
-              <div class="icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 10c0 6-9 11-9 11S3 16 3 10a9 9 0 1 1 18 0z" stroke="#0b7a5c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="#0b7a5c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="card-body">
-                <h3 id="addressTitle">Office Address</h3>
-                <p class="muted">Visit our office</p>
-                <address class="card-address">B-36, Anisabad, Patna, Bihar, India 800002</address>
-                <a class="card-link" href="https://www.google.com/maps/search/?api=1&query=B36+Mitra+Mandal+Colony+Anisabad+Patna+Bihar" target="_blank">Open in Google Maps</a>
-              </div>
-            </article>
+<!-- CONTACT HERO -->
+<section class="contact-hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    We typically respond within 2 hours
+  </div>
 
-            <!-- Hours Card -->
-            <article class="info-card" aria-labelledby="hoursTitle">
-              <div class="icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#0b7a5c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 7v6l4 2" stroke="#0b7a5c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="card-body">
-                <h3 id="hoursTitle">Working Hours</h3>
-                <p class="muted">We're available</p>
-                <p>Sunday - Friday, 9AM to 6PM NPT</p>
-                <p>Mon - Fri: 11:00 AM - 10:00 PM</p>
-              </div>
-            </article>
-          </div>
+  <h1>
+    Let's Discuss About <span>Pharmacy</span><br />
+    <strong>Software</strong>
+  </h1>
 
-          <!-- Trust note -->
-          <div class="trust-note">
-            <strong>Your details are safe with us.</strong> We only use your contact details to respond to your inquiry.
-          </div>
-        </div>
+  <p>
+    Whether you need a demo, technical support, or just want to chat about
+    Pharmacy Software solutions, our team is here to help you succeed.
+  </p>
 
-        <!-- Right column: Map + Form -->
-        <aside class="form-col" aria-label="Contact form and map">
-          <div class="map-placeholder" role="img" aria-label="Office location map placeholder">
-            <div class="map-inner" aria-hidden="true">Map placeholder</div>
-          </div>
+  <div class="hero-rating">
+    <span class="circle"></span>
+    <div>
+      <strong>Join our happy clients</strong><br />
+      Rated 4.9/5 from over 50+ reviews
+    </div>
+  </div>
+</section>
 
-          <section class="contact-form-card" aria-labelledby="formTitle">
-            <h2 id="formTitle">Send us a message</h2>
-            <p class="muted">Fill out the form and we'll get back to you as soon as possible.</p>
 
-            <form id="contactForm" class="contact-form" novalidate aria-describedby="formHelp">
-              <div class="form-row">
-                <div class="form-group half">
-                  <label for="name">Name <span class="req">*</span></label>
-                  <input id="name" name="name" type="text" placeholder="Your full name" required aria-required="true" />
-                  <div class="error" id="err-name" aria-live="polite"></div>
-                </div>
 
-                <div class="form-group half">
-                  <label for="email">Email <span class="req">*</span></label>
-                  <input id="email" name="email" type="email" placeholder="name@example.com" required aria-required="true" />
-                  <div class="error" id="err-email" aria-live="polite"></div>
-                </div>
-              </div>
+<section class="contact-wrapper">
 
-              <div class="form-row">
-                <div class="form-group half">
-                  <label for="phone">Phone</label>
-                  <input id="phone" name="phone" type="tel" placeholder="+91 9xx xxxx xxx" />
-                  <div class="error" id="err-phone" aria-live="polite"></div>
-                </div>
+  <!-- TOP CONTACT CARDS -->
+  <div class="contact-cards">
+    <div class="contact-card">
+      <h3>📞 Phone Support</h3>
+      <p>Talk to our support team</p>
+      <span>+91 91351-55931<br>+91 93049-42225</span>
+    </div>
 
-                <div class="form-group half">
-                  <label for="subject">Subject <span class="req">*</span></label>
-                  <input id="subject" name="subject" type="text" placeholder="Topic (eg. Pricing, Support)" required aria-required="true" />
-                  <div class="error" id="err-subject" aria-live="polite"></div>
-                </div>
-              </div>
+    <div class="contact-card">
+      <h3>✉️ Email</h3>
+      <p>Send us an email</p>
+      <span>bireenainfo@gmail.com</span>
+    </div>
 
-              <div class="form-group">
-                <label for="message">Message <span class="req">*</span></label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell us about your request" required aria-required="true"></textarea>
-                <div class="error" id="err-message" aria-live="polite"></div>
-              </div>
+    <div class="contact-card">
+      <h3>⏰ Working Hours</h3>
+      <p>We’re available</p>
+      <span>Sunday – Friday<br>9 AM – 6 PM</span>
+    </div>
 
-              <div class="form-actions">
-                <button id="submitBtn" type="submit" class="btn-primary">Send Message</button>
-                <div id="formStatus" role="status" aria-live="polite" class="form-status" aria-atomic="true"></div>
-              </div>
-              <p id="formHelp" class="sr-only">All fields marked with * are required. We reply within 24 hours.</p>
-            </form>
+    <div class="contact-card">
+      <h3>💬 Live Chat</h3>
+      <p>Chat with our team</p>
+      <span>Available during working hours</span>
+    </div>
+  </div>
 
-            <details class="faq" open>
-              <summary>Frequently asked</summary>
-              <div class="faq-body">
-                <p><strong>How long to get a reply?</strong> We typically reply within 24 hours.</p>
-                <p><strong>Is my data safe?</strong> Yes — we never sell your data and use it only to respond.</p>
-              </div>
-            </details>
-          </section>
-        </aside>
-      </section>
-    </main>
+  <!-- HELP + FORM SECTION -->
+  <div class="contact-main">
 
-    <div id="footer"></div>
+    <!-- LEFT HELP OPTIONS -->
+    <div class="help-section">
+      <h2>How can we help you?</h2>
+      <p>Select a topic so we can connect you with the right team.</p>
 
-<script>
-  fetch("/components/footer.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    });
-</script>
-    <script src="../assets/js/main.js"></script>
-  </body>
-</html> -->
+      <div class="help-card">✔ Software Demo</div>
+      <div class="help-card">🛠 Technical Support</div>
+      <div class="help-card">📊 Business Consultation</div>
+      <div class="help-card">❓ General Inquiry</div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="form-section">
+      <h2>Send us a message</h2>
+
+      <form>
+        <label>Name</label>
+        <input type="text" placeholder="Your name" />
+
+        <label>Email</label>
+        <input type="email" placeholder="you@example.com" />
+
+        <label>Phone Number</label>
+        <input type="text" placeholder="Your phone number" />
+
+        <label>Message</label>
+        <textarea placeholder="How can we help you?"></textarea>
+
+        <button type="submit">Send message</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- OFFICE VISIT SECTION -->
+  <div class="office-section">
+    <div class="office-text">
+      <h2>Visit Our Office</h2>
+      <p>Come visit us to discuss your needs in person.</p>
+
+      <strong>Bireena Info Tech</strong>
+      <p>
+        BB-36, Vashist Colony<br>
+        Anisabad<br>
+        Patna, Bihar<br>
+        India 800025
+      </p>
+    </div>
+
+    <div class="office-map">
+     <iframe
+      src="https://www.google.com/maps?q=Bireena%20Info%20Tech%20B-36%20Anisabad%20Patna%20Bihar&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+  <div id="footer"></div>
+
+  <!-- JS -->
+
+  <script>
+    fetch("/components/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+
+<script src="../assets/js/main.js"></script>
+  
+
+
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
