@@ -2943,6 +2943,30 @@ textarea {
 }
 
 /* ============================
+   FIX: FEATURES PAGE HEADING UNDER NAVBAR
+   ============================ */
+
+/* Navbar fixed hai, isliye features hero ko offset do */
+.features-hero {
+  margin-top: 0 !important;
+  padding-top: calc(80px + 60px) !important;
+}
+
+/* Mobile navbar height different hai */
+@media (max-width: 768px) {
+  .features-hero {
+    padding-top: calc(70px + 40px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-hero {
+    padding-top: calc(64px + 30px) !important;
+  }
+}
+
+
+/* ============================
    FEATURE CARDS (MAIN LIST)
    ============================ */
 .features-container {
