@@ -96,3 +96,61 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+/* =====================================================
+   RETAIL SERVICES AUTO SLIDER 
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".retail-services-grid");
+  if (!track) return;
+
+  if (window.innerWidth > 1024) return; // desktop = no slider
+
+  const cards = Array.from(track.children);
+  let index = 0;
+  const delay = 8000;
+
+  function cardWidth() {
+    return cards[0].offsetWidth + 20;
+  }
+
+  function slide() {
+    index++;
+    if (index >= cards.length) index = 0;
+    track.style.transform = `translateX(-${index * cardWidth()}px)`;
+  }
+
+  let auto = setInterval(slide, delay);
+
+  document
+    .querySelector(".carousel-btn.next")
+    ?.addEventListener("click", () => {
+      slide();
+      reset();
+    });
+
+  document
+    .querySelector(".carousel-btn.prev")
+    ?.addEventListener("click", () => {
+      index--;
+      if (index < 0) index = cards.length - 1;
+      track.style.transform = `translateX(-${index * cardWidth()}px)`;
+      reset();
+    });
+
+  function reset() {
+    clearInterval(auto);
+    auto = setInterval(slide, delay);
+  }
+
+  // Touch swipe
+  let startX = 0;
+  track.addEventListener("touchstart", (e) => (startX = e.touches[0].clientX));
+  track.addEventListener("touchend", (e) => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (diff > 50) slide();
+    if (diff < -50) index--, slide();
+    reset();
+  });
+});

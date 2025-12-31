@@ -1,0 +1,547 @@
+/* ===================================================
+   SERVICES PAGE STYLES (Retail & Wholesale)
+   =================================================== */
+
+/* ===== 1. HERO SECTION (Common for both) ===== */
+/* ===== RETAIL PAGE HERO SECTION ===== */
+.retail-hero {
+  background: linear-gradient(135deg, #eaf7ee, #f3fbf8);
+  padding: 100px 20px 50px;
+}
+
+.retail-hero-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.retail-hero-text {
+  max-width: 650px;
+}
+
+.retail-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border: 1.5px dashed #2e7d32;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+.retail-hero-text h1 {
+  font-size: 42px;
+  line-height: 1.3;
+  color: #1b5e20;
+  margin-bottom: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.retail-hero-text h1 span {
+  color: #2e7d32;
+}
+
+.retail-hero-text p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.retail-hero-btn {
+  padding: 14px 30px;
+  background: transparent;
+  border: 2px solid #2e7d32;
+  color: #2e7d32;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.retail-hero-btn:hover {
+  background-color: #2e7d32;
+  color: #ffffff;
+}
+
+/* ===== RETAIL SERVICES SECTION ===== */
+.retail-services {
+  background-color: #ffffff;
+  padding: 30px 20px 90px;
+}
+
+.retail-services-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.retail-services-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.retail-services-header h2 {
+  font-size: 34px;
+  color: #1b5e20;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.retail-services-header p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+}
+
+.retail-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.retail-service-card {
+  background: #f9fdfb;
+  border-radius: 14px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.retail-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+
+.retail-service-card h3 {
+  font-size: 20px;
+  color: #0b5f52;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.retail-service-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+/* ===== VALUE SERVICES SECTION (WHOLESALE/RETAIL) ===== */
+.value-services {
+  background: #ffffff;
+  padding: 20px 20px;
+}
+
+.value-services-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.value-title {
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #0b5f52;
+}
+
+.value-title span {
+  color: #2e7d32;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.value-card {
+  background: #eaf7f2;
+  border: 1px solid #cfe9df;
+  border-radius: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 18px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.value-card img {
+  width: 25%;
+  max-width: 90px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.value-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0b5f52;
+}
+
+.value-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.value-cta {
+  margin-top: 40px;
+  padding: 10px 28px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ===== 3. CORE SERVICES GRID ===== */
+.retail-services {
+  background-color: #f8fafc;
+  padding: 80px 20px;
+}
+
+.retail-services-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.retail-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.retail-service-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.service-btn {
+  padding: 12px 26px;
+  background: transparent;
+  border: 2px solid #2e7d32;
+  color: #2e7d32;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.service-btn:hover {
+  background-color: #2e7d32;
+  color: #ffffff;
+}
+
+/* ===== 4. WHY CHOOSE (STAGGERED GRID) ===== */
+.why-choose-staggered,
+.wholesale-why {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.why-choose-grid,
+.wholesale-why-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+
+/* Create the staggered "offset" look for desktop */
+.why-choose-grid .retail-service-card:nth-child(1),
+.wholesale-why-grid .retail-service-card:nth-child(1) {
+  grid-column: 1 / 3;
+}
+
+.why-choose-grid .retail-service-card:nth-child(2),
+.wholesale-why-grid .retail-service-card:nth-child(2) {
+  grid-column: 3 / 5;
+}
+
+.why-choose-grid .retail-service-card:nth-child(3),
+.wholesale-why-grid .retail-service-card:nth-child(3) {
+  grid-column: 5 / 7;
+}
+
+.why-choose-grid .retail-service-card:nth-child(4),
+.wholesale-why-grid .retail-service-card:nth-child(4) {
+  grid-column: 2 / 4;
+}
+
+.why-choose-grid .retail-service-card:nth-child(5),
+.wholesale-why-grid .retail-service-card:nth-child(5) {
+  grid-column: 4 / 6;
+}
+
+/* ===== 5. RESPONSIVE MEDIA QUERIES ===== */
+@media (max-width: 992px) {
+  .retail-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .retail-hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .value-grid,
+  .retail-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reset staggered grid to normal list on mobile */
+  .why-choose-grid,
+  .wholesale-why-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-choose-grid .retail-service-card,
+  .wholesale-why-grid .retail-service-card {
+    grid-column: span 1 !important;
+  }
+
+  .retail-hero-text h1 {
+    font-size: 28px;
+  }
+}
+
+/* ===== WHOLESALE WHY CHOOSE SECTION ===== */
+.wholesale-why {
+  padding-bottom: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #ffffff;
+}
+
+.wholesale-why-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 32px;
+}
+
+/* Top row */
+.wholesale-why-grid .retail-service-card:nth-child(1) {
+  grid-column: 1 / 3;
+}
+
+.wholesale-why-grid .retail-service-card:nth-child(2) {
+  grid-column: 3 / 5;
+}
+
+.wholesale-why-grid .retail-service-card:nth-child(3) {
+  grid-column: 5 / 7;
+}
+
+/* Bottom row */
+.wholesale-why-grid .retail-service-card:nth-child(4) {
+  grid-column: 2 / 4;
+}
+
+.wholesale-why-grid .retail-service-card:nth-child(5) {
+  grid-column: 4 / 6;
+}
+
+/* ===== MODAL POPUP (FIXED FORM SIZE) ===== */
+div.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(8px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999 !important;
+}
+
+div.modal-overlay .modal-content {
+  background: #ffffff !important;
+  width: 90% !important;
+  max-width: 400px !important;
+  padding: 25px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3) !important;
+  position: relative;
+  box-sizing: border-box !important;
+  overflow: hidden;
+}
+
+div.modal-overlay .modal-content h2 {
+  font-size: 20px !important;
+  line-height: 1.3 !important;
+  margin-bottom: 10px !important;
+  color: #1b5e20 !important;
+  font-weight: 700 !important;
+  margin-top: 5px !important;
+}
+div.modal-overlay .modal-content p {
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  margin-bottom: 20px !important;
+  color: #555 !important;
+}
+
+.modal-form {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.modal-form input {
+  width: 100% !important;
+  padding: 12px 14px !important;
+  font-size: 14px !important;
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+}
+
+.modal-form input:focus {
+  outline: none;
+  border-color: #2e7d32;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.1);
+}
+
+.modal-form button {
+  width: 100% !important;
+  padding: 14px !important;
+  color: #eaf7ee;
+  border-radius: 10px;
+  background-color: #2e7d32 !important;
+  font-size: 15px !important;
+  margin-top: 5px !important;
+}
+
+.modal-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(46, 125, 50, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #1e293b;
+}
+
+/* ===== FAQ SECTION ===== */
+.faq-section {
+  background-color: #f3fbf8;
+  padding: 20px 20px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 34px;
+  color: #1b5e20;
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #dbeee6;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 18px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0b5f52;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.faq-question::after {
+  content: "›";
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 22px;
+  font-weight: 700;
+  color: #0b5f52;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-answer p {
+  padding: 0 22px 20px;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
+.faq-item.active .faq-question::after {
+  transform: translateY(-50%) rotate(-90deg);
+}
